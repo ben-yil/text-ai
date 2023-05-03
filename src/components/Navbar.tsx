@@ -1,4 +1,7 @@
 import { ThemeToggle } from "@/components/ThemeToggle";
+import LoginButton from "@/components/ui/LoginButton";
+import SignOutButton from "@/components/ui/SignOutButton";
+import { authOptions } from "@/lib/auth";
 import { getServerSession } from "next-auth";
 import { Siemreap } from "next/font/google";
 import Link from "next/link";
@@ -9,6 +12,9 @@ import { buttonVariants } from "./ui/Button";
 interface NavbarProps {}
 
 const Navbar = async ({}) => {
+
+  const session = await getServerSession(authOptions)
+
   return (
     <div className="fixed backdrop-blur-sm bg-white/75 dark:bg-slate-900/75 z-50 top-0 left-0 right-0 h-20 border-b border-slate-300 dark:border-slate-700 shadow-sm flex items-center justify-between">
       <div className="container max-w-7xl mx-auto w-full flex justify-between items-center">
@@ -31,6 +37,20 @@ const Navbar = async ({}) => {
           >
             Docs
           </Link>
+          {session ? (
+            <>
+              <Link
+                className={buttonVariants({ variant: 'ghost' })}
+                href='/dashboard'>
+                Dashboard
+              </Link>
+              <SignOutButton />
+            </>
+          ) : (
+            <LoginButton />
+            )}
+
+
         </div>
       </div>
     </div>
