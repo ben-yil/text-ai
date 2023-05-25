@@ -3,14 +3,14 @@ import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const headingVariants = cva(
-  "text-black dark:text-white text-center lg:text-left font-extrabold leading-tight tracking-tighter",
+  "text-sky-600 dark:text-white text-center lg:text-left font-extrabold leading-tight tracking-tighter animate-fade-in duration-700      ",
   {
     variants: {
       size: {
-        default: 'text-4xl md:text-5xl lg:text-6xl',
-        lg: 'text-5xl md:text-6xl lg:text-7xl',
-        md:'text-3xl md:text-4xl lg:text-5xl',
-        sm: 'text-2xl md:text-3xl lg:text-4xl',
+        default: "text-4xl md:text-5xl lg:text-6xl",
+        lg: "text-5xl md:text-6xl lg:text-7xl",
+        md: "text-3xl md:text-4xl lg:text-5xl",
+        sm: "text-xl md:text-2xl lg:text-3xl",
       },
       defaultVariants: {
         size: "default",

@@ -1,10 +1,12 @@
-import "@/styles/globals.css";
-import { Inter } from "next/font/google";
-import { cn } from "@/lib/utils";
-import Providers from "@/components/Providers";
 import Navbar from "@/components/Navbar";
+import { Toaster } from "@/components/ui/toast";
+import "@/styles/globals.css";
+import { Work_Sans } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+import Providers from "@/components/Providers";
+import { cn } from "@/lib/utils";
+
+const work_sans = Work_Sans({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -14,16 +16,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn(" bg-white Otext-slate-900 antialiased", inter.className)}
+      className={cn("bg-white text-slate-900 antialiased", work_sans.className)}
     >
-      <body className="className-'min-h-screen bg-slate-50 Odark:bg-slate-900 antialiased">
+      <body className="min-h-screen bg-slate-50 dark:bg-slate-900 antialiased  ">
         <Providers>
-          {children}
           {/* @ts-expect-error Server Component */}
-
           <Navbar />
+          <Toaster position="bottom-right" />
+
+          <main>{children}</main>
         </Providers>
-        <div className="h-40 md:hidden"></div>
       </body>
     </html>
   );

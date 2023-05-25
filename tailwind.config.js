@@ -29,6 +29,12 @@ module.exports = {
         'light-gold': '#f5bc51',
         'dark-gold': '#533519',
       },
+      animation: {
+        "fade-in": "fade-in 3s ease-in-out forwards",
+        title: "title 3s ease-out forwards",
+        "fade-left": "fade-left 3s ease-in-out forwards",
+        "fade-right": "fade-right 3s ease-in-out forwards",
+      },
     },
   },
   plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
