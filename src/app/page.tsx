@@ -47,7 +47,7 @@ export default function Home() {
               AI based text solutions
             </LargeHeading>
 
-            <Paragraph className="text-white text-lg max-w-xl mt-36">
+            <Paragraph className="text-white text-lg max-w-xl mt-44 ">
               Just sign up for your free API key, integrate Text Ai API <br />
               into your project, and start using right away.
             </Paragraph>

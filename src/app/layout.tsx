@@ -16,9 +16,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("bg-white text-slate-900 antialiased", work_sans.className)}
+      className={cn(
+        "bg-[#FEF8EE]  antialiased",
+        work_sans.className
+      )}
     >
-      <body className="min-h-screen bg-slate-50 dark:bg-slate-900 antialiased  ">
+      <body className="min-h-screen bg-[#FBEBE1] dark:bg-slate-900 antialiased  ">
         <Providers>
           {/* @ts-expect-error Server Component */}
           <Navbar />
