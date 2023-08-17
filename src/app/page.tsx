@@ -47,10 +47,6 @@ export default function Home() {
               AI based text solutions
             </LargeHeading>
 
-            <Paragraph className="text-white text-lg max-w-xl mt-44 ">
-              Just sign up for your free API key, integrate Text Ai API <br />
-              into your project, and start using right away.
-            </Paragraph>
             {/* <Image src="/line.png" alt="line" width={"200"} height={"100"} /> */}
           </div>
         </div>
@@ -63,6 +59,12 @@ export default function Home() {
           className="absolute -right-40 top-32 invisible lg:visible   "
         />
       </div>
+      <div className="absolute bottom-32  align-items w-full flex ">        
+        <Paragraph className="text-white ml-20  md:ml-32 lg:ml-40 relative text-sm md:text-lg max-w-xl text-center">
+              Just sign up for your free API key, integrate Text Ai API <br />
+              into your project, and start using right away.
+            </Paragraph>
+            </div>
     </section>
   );
 }
