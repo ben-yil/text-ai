@@ -7,7 +7,7 @@ import DocumentationTabs from '@/components/DocumentationTabs'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Similarity API | Documentation',
+  title: 'Text AI | Documentation',
   description: 'Free & open-source text similarity API',
 }
 
